@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E33802DC1BB4C0C7008360E5 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33802DB1BB4C0C7008360E5 /* Expression.swift */; settings = {ASSET_TAGS = (); }; };
 		E34C11A31BAF5F9F00D8059D /* tibasic.h in Headers */ = {isa = PBXBuildFile; fileRef = E34C11A21BAF5F9F00D8059D /* tibasic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E34C11AA1BAF5FA000D8059D /* tibasic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E34C119F1BAF5F9F00D8059D /* tibasic.framework */; settings = {ASSET_TAGS = (); }; };
 		E34C11AF1BAF5FA000D8059D /* tibasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C11AE1BAF5FA000D8059D /* tibasicTests.swift */; };
+		E34C11BA1BAF5FB400D8059D /* SwiftParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E34C11B91BAF5FB400D8059D /* SwiftParsing.framework */; };
+		E34C11BF1BAF60C100D8059D /* grammar.md in Sources */ = {isa = PBXBuildFile; fileRef = E34C11BE1BAF60C100D8059D /* grammar.md */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +26,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E33802DB1BB4C0C7008360E5 /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
 		E34C119F1BAF5F9F00D8059D /* tibasic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = tibasic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34C11A21BAF5F9F00D8059D /* tibasic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tibasic.h; sourceTree = "<group>"; };
 		E34C11A41BAF5F9F00D8059D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E34C11A91BAF5FA000D8059D /* tibasicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tibasicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34C11AE1BAF5FA000D8059D /* tibasicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tibasicTests.swift; sourceTree = "<group>"; };
 		E34C11B01BAF5FA000D8059D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E34C11B91BAF5FB400D8059D /* SwiftParsing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftParsing.framework; path = "../../../Library/Developer/Xcode/DerivedData/SwiftParsing-bqfzyoxfenefcrbdvnknikgbvumu/Build/Products/Debug/SwiftParsing.framework"; sourceTree = "<group>"; };
+		E34C11BE1BAF60C100D8059D /* grammar.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = grammar.md; path = "../../swift-parsing/Parsing/Parsing/grammar.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E34C11BA1BAF5FB400D8059D /* SwiftParsing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +60,7 @@
 		E34C11951BAF5F9F00D8059D = {
 			isa = PBXGroup;
 			children = (
+				E34C11B91BAF5FB400D8059D /* SwiftParsing.framework */,
 				E34C11A11BAF5F9F00D8059D /* tibasic */,
 				E34C11AD1BAF5FA000D8059D /* tibasicTests */,
 				E34C11A01BAF5F9F00D8059D /* Products */,
@@ -71,6 +79,7 @@
 		E34C11A11BAF5F9F00D8059D /* tibasic */ = {
 			isa = PBXGroup;
 			children = (
+				E34C11BB1BAF5FBA00D8059D /* Parser */,
 				E34C11A21BAF5F9F00D8059D /* tibasic.h */,
 				E34C11A41BAF5F9F00D8059D /* Info.plist */,
 			);
@@ -84,6 +93,15 @@
 				E34C11B01BAF5FA000D8059D /* Info.plist */,
 			);
 			path = tibasicTests;
+			sourceTree = "<group>";
+		};
+		E34C11BB1BAF5FBA00D8059D /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				E33802DB1BB4C0C7008360E5 /* Expression.swift */,
+				E34C11BE1BAF60C100D8059D /* grammar.md */,
+			);
+			name = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +160,7 @@
 		E34C11961BAF5F9F00D8059D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Michael Welch";
 				TargetAttributes = {
@@ -193,6 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E34C11BF1BAF60C100D8059D /* grammar.md in Sources */,
+				E33802DC1BB4C0C7008360E5 /* Expression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +323,7 @@
 		E34C11B41BAF5FA000D8059D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -314,12 +336,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.welch.tibasic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		E34C11B51BAF5FA000D8059D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -376,6 +400,7 @@
 				E34C11B51BAF5FA000D8059D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E34C11B61BAF5FA000D8059D /* Build configuration list for PBXNativeTarget "tibasicTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +409,7 @@
 				E34C11B81BAF5FA000D8059D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
